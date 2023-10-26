@@ -19,7 +19,7 @@ export interface Commit {
   tags: string[];
 }
 export interface Options {
-  dst: string;
+  dst?: string;
   respectingMailmap?: boolean
 }
 
