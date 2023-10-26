@@ -20,6 +20,7 @@ export interface Commit {
 }
 export interface Options {
   dst: string;
+  respectingMailmap?: boolean
 }
 
 type GetLastCommitCallback = (err: Error | null, commit: Commit) => void;

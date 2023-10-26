@@ -24,14 +24,15 @@ const executeCommand = (command, options, callback) => {
 }
 
 const prettyFormat = ["%h", "%H", "%s", "%f", "%b", "%at", "%ct", "%an", "%ae", "%cn", "%ce", "%N", ""]
+const prettyFormatMailmap = ["%h", "%H", "%s", "%f", "%b", "%at", "%ct", "%aN", "%aE", "%cN", "%cE", "%N", ""]
 
-const getCommandString = splitCharacter =>
-  'git log -1 --pretty=format:"' + prettyFormat.join(splitCharacter) +'"' +
+const getCommandString = (splitCharacter, respectingMailmap) =>
+  'git log -1 --pretty=format:"' + (respectingMailmap ? prettyFormatMailmap : prettyFormat).join(splitCharacter) +'"' +
     ' && git rev-parse --abbrev-ref HEAD' +
     ' && git tag --contains HEAD'
 
 const getLastCommit = (callback, options) => {
-  const command = getCommandString(splitCharacter)
+  const command = getCommandString(splitCharacter, options.respectingMailmap)
 
   executeCommand(command, options, function(err, res) {
     if (err) {
