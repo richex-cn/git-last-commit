@@ -1,5 +1,5 @@
 {
-  "name": "git-last-commit",
+  "name": "@richex/git-last-commit",
   "version": "1.0.1",
   "description": "Read details of the last commit including tags",
   "main": "./source/index.js",
