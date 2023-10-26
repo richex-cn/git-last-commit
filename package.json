@@ -1,6 +1,6 @@
 {
   "name": "@richex/git-last-commit",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Read details of the last commit including tags",
   "main": "./source/index.js",
   "types": "./index.d.ts",
