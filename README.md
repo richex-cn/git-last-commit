@@ -44,3 +44,7 @@ git.getLastCommit(function(err, commit) {
   console.log(commit);
 }, {dst: 'some/other/path'});
 ```
+
+## Notes
+
+This repo forked from [git-last-commit](https://github.com/seymen/git-last-commit).
