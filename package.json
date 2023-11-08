@@ -5,9 +5,9 @@
   "main": "./source/index.js",
   "types": "./index.d.ts",
   "scripts": {
-    "test": "node_modules/.bin/mocha",
-    "lint": "node_modules/.bin/eslint source/**",
-    "coverage": "node_modules/.bin/nyc npm run test"
+    "test": "mocha",
+    "lint": "eslint source/**",
+    "coverage": "nyc npm run test"
   },
   "repository": {
     "type": "git",
