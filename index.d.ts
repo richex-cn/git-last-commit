@@ -26,4 +26,4 @@ export interface Options {
 type GetLastCommitCallback = (err: Error | null, commit: Commit) => void;
 
 export const getLastCommit: (callback: GetLastCommitCallback, options?: Options) => void;
-export const getLastCommitAsync: (options?: Options) => Promise<GetLastCommitCallback>;
+export const getLastCommitAsync: (options?: Options) => Promise<Commit>;
