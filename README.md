@@ -2,6 +2,11 @@
 Node.js module to read last git commit information including tags and branch - mostly to be used by continuous integration and build systems for build tagging purposes.
 
 ## Usage
+
+```sh
+$ npm i -D @richex/git-last-commit
+```
+
 ```javascript
 var git = require('git-last-commit');
 
