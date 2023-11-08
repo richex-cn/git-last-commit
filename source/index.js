@@ -73,6 +73,18 @@ const getLastCommit = (callback, options) => {
   })
 }
 
+const getLastCommitAsync = options =>
+  new Promise((resolve, reject) => {
+    getLastCommit(
+      (err, res) =>
+        err
+          ? reject(typeof err === 'string' ? new Error(err) : err)
+          : resolve(res),
+      options
+    )
+  })
+
 module.exports = {
-  getLastCommit
+  getLastCommit,
+  getLastCommitAsync
 }
