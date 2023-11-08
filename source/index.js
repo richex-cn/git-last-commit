@@ -32,7 +32,10 @@ const getCommandString = (splitCharacter, respectingMailmap) =>
     ' && git tag --contains HEAD'
 
 const getLastCommit = (callback, options) => {
-  const command = getCommandString(splitCharacter, options.respectingMailmap)
+  const command = getCommandString(
+    splitCharacter,
+    !(options && options.respectingMailmap === false)
+  )
 
   executeCommand(command, options, function(err, res) {
     if (err) {
